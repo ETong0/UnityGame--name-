@@ -14,8 +14,17 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-		body.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, body.velocity.y);
+		//move left and right
+		float horizontalInupt = Input.GetAxis("Horizontal");
+		body.velocity = new Vector2(horizontalInupt * speed, body.velocity.y);
 
+		//flip sprite when facing left and right
+		if (horizontalInupt > 0.01f)
+			transform.localScale = Vector3.one;
+		else if (horizontalInupt > -0.01f)
+			transform.localScale = new Vector3(-1,1,1);
+
+		//jump
 		if (Input.GetKey(KeyCode.Space))
 			body.velocity = new Vector2(body.velocity.x, speed);
     }
