@@ -4,7 +4,7 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     [SerializeField] private float startingHealth;
-    private float currentHealth;
+    public float currentHealth { get; private set; }
 
     private void Awake()
     {
@@ -12,7 +12,7 @@ public class Health : MonoBehaviour
 
     }
 
-    public void TackDanmage(float _damage)
+    public void TakeDanmage(float _damage)
     {
 
         currentHealth = Mathf.Clamp(currentHealth - _damage, 0, startingHealth);
@@ -29,5 +29,10 @@ public class Health : MonoBehaviour
 
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+            TakeDanmage(1);
 
+    }
 }

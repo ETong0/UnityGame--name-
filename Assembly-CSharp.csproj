@@ -64,6 +64,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Health\Health.cs" />
+    <Compile Include="Assets\Health\HealthBar.cs" />
     <Compile Include="Assets\Scripts\CameraControler.cs" />
     <Compile Include="Assets\Scripts\Door.cs" />
     <Compile Include="Assets\Scripts\PlayerAttack.cs" />
