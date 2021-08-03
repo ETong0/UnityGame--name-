@@ -5,10 +5,13 @@ public class Health : MonoBehaviour
 {
     [SerializeField] private float startingHealth;
     public float currentHealth { get; private set; }
+    private Animator anim;
+
 
     private void Awake()
     {
         currentHealth = startingHealth;
+        anim = GetComponent< Animator > ();
 
     }
 
@@ -20,11 +23,12 @@ public class Health : MonoBehaviour
 
         if (currentHealth > 0)
         {
-            //Player Hurt
+            anim.SetTrigger("Hurt");
+
         }
         else
         {
-            //Player dead
+            anim.SetTrigger("die");
         }
 
     }
