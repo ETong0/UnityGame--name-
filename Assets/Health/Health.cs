@@ -1,5 +1,4 @@
-﻿
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Health : MonoBehaviour
 {
@@ -8,41 +7,32 @@ public class Health : MonoBehaviour
     private Animator anim;
     private bool dead;
 
-
     private void Awake()
     {
         currentHealth = startingHealth;
-        anim = GetComponent< Animator > ();
-
+        anim = GetComponent<Animator>();
     }
-
     public void TakeDanmage(float _damage)
     {
-
         currentHealth = Mathf.Clamp(currentHealth - _damage, 0, startingHealth);
-
 
         if (currentHealth > 0)
         {
-            anim.SetTrigger("Hurt");
-
+            anim.SetTrigger("hurt");
+            //iframes
         }
         else
         {
-            if (!dead) {
+            if (!dead)
+            {
                 anim.SetTrigger("die");
                 GetComponent<PlayerMovement>().enabled = false;
                 dead = true;
             }
-           
         }
-
     }
-
-    private void Update()
+    public void AddHealth(float _value)
     {
-        if (Input.GetKeyDown(KeyCode.E))
-            TakeDanmage(1);
-
+        currentHealth = Mathf.Clamp(currentHealth + _value, 0, startingHealth);
     }
 }
