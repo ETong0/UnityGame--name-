@@ -9,9 +9,7 @@ public class Enemy_Sideways : MonoBehaviour
     private bool movingLeft;
     private float leftEdge;
     private float rightEdge;
-
-
-    private void Awake()
+        private void Awake()
     {
         leftEdge = transform.position.x - movementDisstant;
         rightEdge = transform.position.x + movementDisstant;

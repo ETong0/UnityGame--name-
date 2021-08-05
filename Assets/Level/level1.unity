@@ -1707,6 +1707,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthValue: 1
+  playerHealth: {fileID: 50360302}
 --- !u!212 &227975028
 SpriteRenderer:
   m_ObjectHideFlags: 0
