@@ -51,13 +51,15 @@ public class Health : MonoBehaviour
     }
     private System.Collections.IEnumerator Invonerability()
     {
-        Physics2D.IgnoreLayerCollision(10, 12, true);
+        Physics2D.IgnoreLayerCollision(11, 12, true);
         for (int i = 0; i < numberOfFlashes; i++)
         {
             spriteRend.color = new Color(1, 0, 0, 0.5f);
-            
+            yield return new WaitForSeconds(iFrameDuration / (numberOfFlashes));
+            spriteRend.color = Color.white;
+            yield return new WaitForSeconds(1);
         }
-        Physics2D.IgnoreLayerCollision(10, 12, false);
+        Physics2D.IgnoreLayerCollision(11, 12, false);
 
     }
 
