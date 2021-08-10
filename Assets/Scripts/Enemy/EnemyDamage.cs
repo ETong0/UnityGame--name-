@@ -8,7 +8,7 @@ public class EnemyDamage : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "player")
+        if (collision.tag == "Player")
             collision.GetComponent<Health>().TakeDanmage(damage);
     }
    
