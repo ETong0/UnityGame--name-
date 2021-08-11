@@ -38,12 +38,17 @@ public class FireTrap : MonoBehaviour
     private IEnumerator ActiveFireTrap()
     {
         triggered = true;
+        anim.SetBool("triggered", true);
         yield return new WaitForSeconds(activationDelay);
         active = true;
+        anim.SetBool("triggered", false);
+        anim.SetBool("activated", true);
+
+
         yield return new WaitForSeconds(activTime);
         active = false;
         triggered = false;
-
+        anim.SetBool("activated", false);
     }
 
 }
