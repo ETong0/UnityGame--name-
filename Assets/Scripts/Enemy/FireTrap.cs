@@ -27,7 +27,7 @@ public class FireTrap : MonoBehaviour
         {
             if (!triggered)
             {
-
+                StartCoroutine(ActiveFireTrap());
             }
             if (active)
                 collision.GetComponent<Health>().TakeDanmage(damage);
@@ -35,5 +35,15 @@ public class FireTrap : MonoBehaviour
 
     }
 
-    private IEnumerator 
+    private IEnumerator ActiveFireTrap()
+    {
+        triggered = true;
+        yield return new WaitForSeconds(activationDelay);
+        active = true;
+        yield return new WaitForSeconds(activTime);
+        active = false;
+        triggered = false;
+
+    }
+
 }

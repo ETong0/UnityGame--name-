@@ -64,13 +64,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Health\Health.cs" />
-    <Compile Include="Assets\Health\HealthBar.cs" />
-    <Compile Include="Assets\Scripts\CameraControler.cs" />
-    <Compile Include="Assets\Scripts\Door.cs" />
-    <Compile Include="Assets\Scripts\PlayerAttack.cs" />
-    <Compile Include="Assets\Scripts\PlayerMovement.cs" />
-    <Compile Include="Assets\Scripts\Projectile.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyDamage.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Enemy_Sideways.cs" />
+    <Compile Include="Assets\Scripts\Enemy\FireTrap.cs" />
+    <Compile Include="Assets\Scripts\Health\Health.cs" />
+    <Compile Include="Assets\Scripts\Health\HealthBar.cs" />
+    <Compile Include="Assets\Scripts\Health\healthCollectable.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerAttack.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\Player\Projectile.cs" />
+    <Compile Include="Assets\Scripts\Room\Door.cs" />
+    <Compile Include="Assets\Scripts\core\CameraControler.cs" />
     <None Include="Assets\Sprits\Dragon Warrior Files\Read Me.txt" />
     <Reference Include="UnityEngine">
       <HintPath>/Applications/Unity/Hub/Editor/2019.4.18f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>

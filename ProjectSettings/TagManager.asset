@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Grounded
   - Ground
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -17,9 +18,9 @@ TagManager:
   - 
   - Ground
   - Wall
-  - 
-  - 
-  - 
+  - Door
+  - Player
+  - Enemies
   - 
   - 
   - 
@@ -42,4 +43,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 2015180057
+    locked: 0
+  - name: Foreground
+    uniqueID: 415931245
+    locked: 0
+  - name: Player
+    uniqueID: 1866568873
+    locked: 0
+  - name: Ground
+    uniqueID: 2512072267
     locked: 0
